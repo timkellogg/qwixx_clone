@@ -16,17 +16,7 @@ const state = {
     green: false,
     blue: false,
   },
-  players: [
-    // {
-    //   name: '',
-    //   total: '',
-    //   redMarked: [],
-    //   yellowMarked: [],
-    //   greenMarked: [],
-    //   blueMarked: [],
-    //   combinationSelected: '',
-    // },
-  ],
+  players: [],
   playerOrder: [],
   currentPlayerTurn: '',
   die: {
