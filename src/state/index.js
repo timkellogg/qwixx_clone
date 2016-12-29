@@ -9,6 +9,33 @@ Vue.use(Vuex);
 // initial state
 const state = {
   gameStarted: false,
+  winner: false,
+  locked: {
+    yellow: false,
+    red: false,
+    green: false,
+    blue: false,
+  },
+  players: [
+    // {
+    //   name: '',
+    //   total: '',
+    //   redMarked: [],
+    //   yellowMarked: [],
+    //   greenMarked: [],
+    //   blueMarked: [],
+    //   combinationSelected: '',
+    // },
+  ],
+  playerOrder: [],
+  currentPlayerTurn: '',
+  die: {
+    yellow: '',
+    red: '',
+    blue: '',
+    green: '',
+    white: [],
+  },
 };
 
 export default new Vuex.Store({
