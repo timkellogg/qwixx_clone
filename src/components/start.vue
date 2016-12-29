@@ -37,9 +37,9 @@ export default {
       this.$store.dispatch('removePlayer', player);
     },
     startGame() {
-      this.$store.dispatch('startGame');
+      this.$store.dispatch('startGame').then(() => this.$router.replace('/board'));
     }
-  }
+  },
 }
 </script>
 
