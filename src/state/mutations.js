@@ -7,6 +7,7 @@ const defaultPlayerState = {
   greenMarked: [],
   blueMarked: [],
   combinationSelected: [],
+  foulsTaken: [],
 };
 
 function randId() {
