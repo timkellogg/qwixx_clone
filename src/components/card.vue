@@ -1,6 +1,8 @@
 <!-- individual player score card -->
 <template lang="html">
   <div class="player-card">
+    <label>{{player.name}}'s Scoresheet</label>
+    <label>{{whiteCombination}}</label>
     <ul v-for="color in colors" class="player-card__row">
       <li
         v-if="color === 'green' || color === 'blue'"
@@ -8,7 +10,7 @@
         :class="color"
         class="player-card__cell"
       >
-        <span class="player-card__cell--inner">{{ n }}</span>
+        <span @click="mark()" class="player-card__cell--inner">{{ n }}</span>
       </li>
       <li
         v-if="color === 'red' || color === 'yellow'"
@@ -23,8 +25,19 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   props: ['player'],
+  computed: {
+    ...mapGetters({
+      whiteCombination: 'whiteCombination',
+      blueCombinations: 'blueCombinations',
+      redCombinations: 'redCombinations',
+      yellowCombinations: 'yellowCombinations',
+      greenCombinations: 'greenCombinations',
+    }),
+  },
   data() {
     return {
       colors: ['red', 'yellow', 'green', 'blue'],
@@ -32,6 +45,11 @@ export default {
       numbersReversed: [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2]
     }
   },
+  methods: {
+    mark(player, value, ) {
+
+    }
+  }
 }
 </script>
 
