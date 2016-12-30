@@ -20,16 +20,15 @@ const state = {
   playerOrder: [],
   currentPlayerTurn: '',
   dice: {
-    yellow: 1,
-    red: 4,
-    blue: 5,
-    green: 2,
-    whiteOne: 3,
-    whiteTwo: 5,
+    yellow: null,
+    red: null,
+    blue: null,
+    green: null,
+    whiteOne: null,
+    whiteTwo: null,
   },
 };
 // check if die in player has rolled
-
 
 export default new Vuex.Store({
   state,

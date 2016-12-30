@@ -39,15 +39,18 @@ export default {
     margin-bottom: 10px;
   }
   .die {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     color: white;
     display: inline-block;
     color: white;
-    line-height: 50px;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bold;
   }
   .die__white {
-    background-color: black;
+    background-color: white;
+    color: black;
   }
   .die__red {
     background-color: rgb(255, 0, 0);

@@ -1,5 +1,6 @@
 export const gameStarted = state => state.gameStarted;
 export const players = state => state.players;
+export const currentPlayerTurn = state => state.currentPlayerTurn;
 
 /* dice */
 export const whiteOneDie = state => state.dice.whiteOne;
