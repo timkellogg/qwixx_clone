@@ -2,12 +2,14 @@
   <div class="dice-container">
     <button @click="rollDice()" class="btn__roll">Roll</button>
 
-    <span class="die die__white">{{ whiteOneDie }}</span>
-    <span class="die die__white">{{ whiteTwoDie }}</span>
-    <span class="die die__red">{{ redDie }}</span>
-    <span class="die die__blue">{{ blueDie }}</span>
-    <span class="die die__green">{{ greenDie }}</span>
-    <span class="die die__yellow">{{ yellowDie }}</span>
+    <div v-show="showDice">
+      <span class="die die__white">{{ whiteOneDie }}</span>
+      <span class="die die__white">{{ whiteTwoDie }}</span>
+      <span class="die die__red">{{ redDie }}</span>
+      <span class="die die__blue">{{ blueDie }}</span>
+      <span class="die die__green">{{ greenDie }}</span>
+      <span class="die die__yellow">{{ yellowDie }}</span>
+    </div>
   </div>
 </template>
 
@@ -24,6 +26,7 @@ export default {
       redDie: 'redDie',
       blueDie: 'blueDie',
       greenDie: 'greenDie',
+      showDice: 'showDice',
     }),
   },
   methods: {

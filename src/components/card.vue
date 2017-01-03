@@ -1,8 +1,8 @@
 <!-- individual player score card -->
 <template lang="html">
   <div class="player-card">
-    <label>{{player.name}}'s Scoresheet</label>
-    <label>{{whiteCombination}}</label>
+    <label>{{ player.name }}'s Scoresheet</label>
+    <label>{{ whiteCombination }}</label>
     <ul v-for="color in colors" class="player-card__row">
       <li
         v-if="color === 'green' || color === 'blue'"
@@ -10,7 +10,7 @@
         :class="color"
         class="player-card__cell"
       >
-        <span @click="mark()" class="player-card__cell--inner">{{ n }}</span>
+        <span @click="mark(player, n, color)" class="player-card__cell--inner">{{ n }}</span>
       </li>
       <li
         v-if="color === 'red' || color === 'yellow'"
@@ -18,7 +18,7 @@
         :class="color"
         class="player-card__cell"
       >
-        <span class="player-card__cell--inner">{{ n }}</span>
+        <span @click="mark(player, n, color)" class="player-card__cell--inner">{{ n }}</span>
       </li>
     </ul>
   </div>
@@ -46,9 +46,9 @@ export default {
     }
   },
   methods: {
-    mark(player, value, ) {
-
-    }
+    mark(player, n, color) {
+      this.$store.dispatch('mark', { player, n, color });
+    },
   }
 }
 </script>
@@ -56,6 +56,10 @@ export default {
 <style lang="css" scoped>
   .player-card {
     margin-bottom: 20px;
+  }
+
+  .disabled {
+    pointer-events: none;
   }
 
   .player-card__row {

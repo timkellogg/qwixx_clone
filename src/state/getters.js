@@ -9,6 +9,7 @@ export const yellowDie = state => state.dice.yellow;
 export const redDie = state => state.dice.red;
 export const blueDie = state => state.dice.blue;
 export const greenDie = state => state.dice.green;
+export const showDice = state => state.showDice;
 
 /* combinations */
 export const whiteCombination = state => state.dice.whiteOne + state.dice.whiteTwo;

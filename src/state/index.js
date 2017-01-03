@@ -27,6 +27,7 @@ const state = {
     whiteOne: null,
     whiteTwo: null,
   },
+  showDice: false,
 };
 // check if die in player has rolled
 
